@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Styles Javascript</title>
+    </head>
+
+    <body class="main page">
+
+    <h1 class="toto">Let's Hack them All</h1>
+
+    <button type="button">DANGER</button>
+
+
+    <script>
+
+        var titRe = document.getElementsByClassName("toto")[0];
+        titRe.classList.add("titre");
+
+        alert(document.getElementsByClassName("titre").item(0).className);
+
+        var teXt = document.getElementsByTagName("button")[0];
+        teXt.addEventListener("click", event => {
+            var changeText = document.getElementsByClassName("titre")[0];
+            changeText.style.backgroundColor="red";
+        })
+    </script>
+
+    </body>
+
+</html>

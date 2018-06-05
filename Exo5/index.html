@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Styles Javascript</title>
+    </head>
+
+    <body class="main page">
+
+        <h1 class="toto">Let's Hack them All</h1>
+
+    <script>
+
+        var tiTre = document.getElementsByClassName("toto")[0];
+        var newP = document.createElement("P");
+        newP.appendChild(document.createTextNode("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad adipisci aliquam aliquid aut blanditiis consequuntur cumque deleniti, dolorum ea earum eligendi et eveniet exercitationem fugiat harum id iure laudantium magni modi molestias nam odio pariatur placeat porro quae quaerat quam qui ratione reiciendis sequi similique sint tempore temporibus tenetur totam veniam! Ad dolore esse et fuga inventore temporibus velit voluptates? Culpa laboriosam nisi nulla qui, quia vel velit voluptatem! Dolore dolorem earum, eius eum fuga id incidunt iure laboriosam qui repellendus unde ut velit? Aut earum nisi quibusdam. Doloribus illum in ipsum, nisi quia quibusdam rem rerum tempore ut."));
+        tiTre.appendChild(newP);
+
+
+        var newButton = document.createElement("BUTTON");
+        var buttonValue = document.createTextNode("Afficher / Cacher");
+        newButton.appendChild(buttonValue);
+        tiTre.appendChild(newButton);
+
+        var btn = document.getElementsByTagName("button")[0];
+        newP.style.visibility = "visible";
+
+        btn.addEventListener("click", event => {
+            if (newP.style.visibility == "visible"){
+               newP.style.visibility = "hidden";
+            }
+            else {
+                newP.style.visibility = "visible";
+            };
+        });
+
+    </script>
+
+    </body>
+
+</html>

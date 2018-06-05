@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Styles Javascript</title>
+    </head>
+
+    <body class="main page">
+
+        <h1 class="toto">Let's Hack them All</h1>
+
+        <button type="button">DANGER</button>
+
+
+    <script>
+
+        var teXt = document.getElementsByTagName("button")[0];
+        teXt.addEventListener("click", event => {
+            var changeText = document.getElementsByClassName("toto")[0];
+            changeText.style="color:red";
+        })
+    </script>
+
+    </body>
+
+</html>
